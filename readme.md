@@ -108,7 +108,7 @@ POST the file to OT-2:
 ```python
 response = requests.post(
     url=f"http://{robot_ip_address}:31950/protocols",
-    files=[("protocolFile", open("my_protocol.py", 'rb'))],
+    files={"protocolFile": open("my_protocol.py", 'rb')},
     headers={"Opentrons-Version": "2"},
 )
 ```
